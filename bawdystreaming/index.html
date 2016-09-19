@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Bawdy Streaming - Live Streaming and Video On Demand for Bawdy Storytelling</title>
+		<meta name="description" content="TODO">
+		<meta name="keywords" content="TODO">
+		<meta name="robots" content="index,follow">
+		<meta name="author" content="TODO">
+		
+		<!-- CSS Styles -->
+		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+		<link rel="stylesheet" href="css/styles.css?v=1.0">
+
+		<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+
+	</head>
+
+	<body>
+		<div class="container">
+			<header id="bawdy-header">
+				<h1>Bawdy Streaming</h1>
+				<nav id="bawdy-nav">
+					<ul>
+						<li><a href="/">Home</a></li>
+						<li><a href="/live">Live Show</a></li>
+						<li><a href="/videos">VOD/Past Shows</a></li>
+						<li><a href="/about">About</a></li>
+						<li><a href="http://www.bawdystorytelling.com">Website</a></li>
+					</ul>
+				</nav>			
+			</header>
+			
+			<div class="video-stream clear">
+				<!-- DaCast Video Stream Player -->
+				<script id="52952_c_240490" width="720" height="400" src="//player.dacast.com/js/player.js"  class="dacast-video"></script>
+			</div>			
+			<div class="chat">
+				<h3>Bawdy Storytelling Chat</h3>
+				<div id="chat-name"><span class="blink">Chat name: </span><input type="text" id="chat-name-input" cols="10" placeholder="Type Name & Hit Return" autofocus></input></div>
+				<div id="chat-box" name="chatBox"></div>
+					<form onsubmit="chat.sendMsg(); return false;">
+						<label id="msg-title" for="msg" style="float:left">Message:</label>
+						<input type="text" id="msg-input" name="msg" cols="15" rows="3" placeholder="Type Your Message Here & Hit Return" />
+						<!-- <input type="submit" /> -->
+					</form>
+				</div>
+			</div>
+			
+
+			
+			<footer id="bawdy-footer">
+			
+			</footer>
+	
+		</div><!-- !container -->
+
+		<!-- JS Scripts -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+		<script src="js/chat.js"></script>
+	</body>
+</html>

@@ -1,0 +1,274 @@
+/*
+	Bawdy Streaming CSS Styles
+	Author: Rubeun Tan
+	Date: 8/17/2016
+*/
+
+/* custom font josefin sans */
+@font-face {
+	font-family: 'Josefin Sans';
+	src: url('JosefinSans.eot');
+	src: url('JosefinSans.eot?#iefix') format('embedded-opentype'),
+		url('JosefinSans.woff') format('woff'),
+		url('JosefinSans.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* main body */
+body {
+	background: #000 url("../img/red-curtains-bg.jpg") top left no-repeat;
+	background-size: 100%;
+}
+
+.container {
+	color: #fff;
+	margin: 0 auto;
+	background-color: rgba(0,0,0,0.9);
+	padding: 20px 20px 50px 20px;
+	font-size: 1.1em;
+	font-weight: 500;
+	font-family: 'Josefin Sans', Arial, sans-serif;
+	width: 1000px;
+	min-height: 800px;	
+}
+
+.clear {
+	clear: both;
+}
+
+h1 {
+	
+}
+
+nav {
+	display: block;
+  	margin-bottom: 10px;
+}
+nav ul {
+  	list-style: none;
+  	font-size: 20px;
+  	padding-left: 0px;
+}
+nav ul li {
+  	display: inline;
+}
+nav ul li a {
+  	display: block;
+  	float: left;
+  	padding: 3px 6px;
+  	color: #575c7d;
+  	text-decoration: none;
+  	font-weight: bold;
+}
+nav ul li a:hover {
+  	background: #dd1111;
+  	color: #fff;
+  	-webkit-border-radius: 3px;
+  	-moz-border-radius: 3px;
+  	border-radius: 3px;
+  	padding: 3px 6px;
+  	margin: 0;
+  	text-decoration: none;
+}
+
+/* page core */
+div#core {
+  	display: block;
+  	clear: both;
+  	margin-bottom: 20px;
+}
+section#left {
+  	width: 550px;
+  	float: left;
+  	margin: 0 15px;
+}
+section#right {
+  	float: left;
+  	width: 300px;
+}
+ 
+  
+/* clearfix */
+.clearfix:after {
+  	content: ".";
+  	display: block;
+  	clear: both;
+  	visibility: hidden;
+  	line-height: 0;
+  	height: 0;
+}
+.clearfix {
+  	display: inline-block;
+}
+  
+html[xmlns] .clearfix {
+  	display: block;
+}
+* html .clearfix {
+  	height: 1%;
+}
+
+
+/* Left Column - Video */
+.video-stream {
+	width: 640px;
+	float: left;
+	padding: 20px 10px 20px 0;
+}
+
+/* Right Column - Chat */
+#chat-name {
+	padding: 10px 0;
+}
+
+#chat-name-input {
+	width: 150px;
+	height: 15px;
+	margin: 5px 0;
+	border-radius: 7px;
+}
+
+.chat-name-set {
+	background-color: #000;
+	color: #0ab8cd;
+}
+
+#chat-name-input:focus {
+	box-shadow: 0 0 10px rgba(255, 10, 10, 1);
+}
+
+.chat {
+	width: 270px;
+	padding: 20px 0 20px 10px;
+	float: left;
+}
+
+.chat #chat-box {
+	height: 380px;
+	padding: 10px 0;
+	border: 1px solid #ddd;
+	border-radius: 7px;
+	overflow-y: scroll;
+	background: #333;
+	color: #fff;
+}
+
+
+#chat-box::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.9);
+	border-radius: 10px;
+	background-color: #CCCCCC;
+}
+
+#chat-box::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+#chat-box::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: #D62929;
+	background-image: -webkit-linear-gradient(90deg,
+											  transparent,
+											  rgba(0, 0, 0, 0.4) 50%,
+											  transparent,
+											  transparent)
+}
+
+
+.chat form {
+	margin: 10px 0 0 0;
+}
+.chat-zone {
+	padding: 20px;
+	height: 400px;
+}
+.chatmsg {
+	margin: 0 5px;
+	font-size: 0.8em;
+	padding: 10px 5px 0 5px;
+}
+.chatmsg b {
+	color: #0ab8cd;
+}
+#msg-input {
+	border: 1px solid #cccccc;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+	outline: none;
+	padding: 4px 6px;
+	font-size: 10px;
+	line-height: 20px;
+	color: #555555;
+	border-radius: 3px;
+	width: 255px;
+}
+
+#msg-title {
+	padding: 10px 0 5px 0;
+}
+
+
+/* Blink to INSIST user type in name */ 
+.blink {
+    animation-duration: 1s;
+    animation-name: blink;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+@keyframes blink {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+
+@media screen  and (max-width: 979px) /* Tablet */ {
+	.container {
+		width: 700px;		
+		margin: 0 auto;		
+		background-color: #fff;
+		padding: 10px 10px 10px 65px;
+		min-height: 1000px;
+	}
+	.video-stream {
+		width: 640px;
+		margin: 0 auto;
+		padding: 20px 10px 20px 0;
+	}
+	
+	.chat {
+		width: 610px;
+		padding: 20px 0 20px 10px;
+	}
+
+}
+
+@media screen and (max-width: 650px) /* Mobile */ {
+	.container {
+		width: 600px;	
+		margin: 0 auto;		
+		background-color: #fff;
+		padding: 10px;
+		min-height: 1000px;
+	}
+	
+	.video-stream {
+		width: 640px;
+		padding: 20px 10px 20px 0;
+	}
+	
+	.chat {
+		width: 610px;
+		padding: 20px 0 20px 10px;
+	}
+
+	
+}
