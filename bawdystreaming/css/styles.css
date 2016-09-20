@@ -1,7 +1,7 @@
 /*
 	Bawdy Streaming CSS Styles
 	Author: Rubeun Tan
-	Date: 8/17/2016
+	Date: 9/19/2016
 */
 
 /* custom font josefin sans */
@@ -15,7 +15,7 @@
 	font-style: normal;
 }
 
-/* main body */
+/* ### BASIC LAYOUT ### */
 body {
 	background: #000 url("../img/red-curtains-bg.jpg") top left no-repeat;
 	background-size: 100%;
@@ -25,20 +25,32 @@ body {
 	color: #fff;
 	margin: 0 auto;
 	background-color: rgba(0,0,0,0.9);
-	padding: 20px 20px 50px 20px;
+	padding: 20px 20px 10px 20px;
 	font-size: 1.1em;
 	font-weight: 500;
 	font-family: 'Josefin Sans', Arial, sans-serif;
 	width: 1000px;
-	min-height: 800px;	
+	min-height: 800px;
+  	border-radius: 10px;		
+  	-webkit-border-radius: 10px;
+  	-moz-border-radius: 10px;
 }
 
 .clear {
 	clear: both;
 }
 
-h1 {
-	
+a{
+	color: #999;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #ddd;
+}
+
+header#bawdy-header {
+	height: 100px;
 }
 
 nav {
@@ -72,23 +84,14 @@ nav ul li a:hover {
   	text-decoration: none;
 }
 
-/* page core */
-div#core {
-  	display: block;
-  	clear: both;
-  	margin-bottom: 20px;
+nav ul li a.active {
+	color: #cd0a0a;
 }
-section#left {
-  	width: 550px;
-  	float: left;
-  	margin: 0 15px;
+
+nav ul li a.active:hover {
+	color: #fff;
 }
-section#right {
-  	float: left;
-  	width: 300px;
-}
- 
-  
+
 /* clearfix */
 .clearfix:after {
   	content: ".";
@@ -109,6 +112,31 @@ html[xmlns] .clearfix {
   	height: 1%;
 }
 
+
+/* ### HOME PAGE ### */
+
+.home-promo {
+	background: #000 url("../img/Promo-Bawdy-CoupleWatching1a.jpg") top left no-repeat;
+	width: 800px;
+	height: 450px;
+	margin: 20px auto 50px auto;
+}
+
+.home-promo-copy {
+	width: 700px;
+	margin: 0 10px 10px 0;
+	padding: 230px 50px 10px 50px;
+}
+
+.home-promo-copy h3,
+.home-promo-copy p {	
+	background: rgba(0,0,0,0.5);
+	padding: 10px 20px;
+	margin: 0;
+}
+
+
+/* ### LIVE STREAM PAGE ### */
 
 /* Left Column - Video */
 .video-stream {
@@ -212,6 +240,62 @@ html[xmlns] .clearfix {
 }
 
 
+/* ### VOD PAGE ### */
+
+iframe#video-iframe {
+	width: 640px;
+}
+
+.vod {
+	width: 270px;
+	padding: 20px 0 20px 10px;
+	float: left;
+}
+
+.vod #vod-box {
+	min-height: 380px;
+	padding: 10px 0;
+	border-radius: 7px;
+	background: #000;
+}
+
+.vod #vod-box h4 {
+	background: #000;
+	color: #ddd;
+	font-size: 0.8em;
+}
+
+.vod #vod-box h4.ui-state-active {
+	color: #cd0a0a;
+}
+
+.vod #vod-box div {
+	background: #000;
+	color: #ddd;
+	font-size: 0.6em;
+}
+
+.vod #vod-box a {
+	color: #777;
+}
+
+.vod #vod-box a:hover {
+	color: #cd0a0a;
+}
+
+/* Remove blue accessibility outline */
+.ui-accordion-header {
+	outline: none;
+}
+
+/* Footer */
+#bawdy-footer {
+	width: 100%;
+	padding: 50px 10px 10px 0;
+	font-size: 14px;
+}
+
+
 /* Blink to INSIST user type in name */ 
 .blink {
     animation-duration: 1s;
@@ -225,33 +309,39 @@ html[xmlns] .clearfix {
         opacity: 1;
     }
     to {
-        opacity: 0;
+        opacity: 0.5;
     }
 }
 
+/* Tablet */
 
-@media screen  and (max-width: 979px) /* Tablet */ {
+/*
+@media screen  and (max-width: 979px)  {
 	.container {
-		width: 700px;		
+		width: 600px;		
 		margin: 0 auto;		
 		background-color: #fff;
 		padding: 10px 10px 10px 65px;
 		min-height: 1000px;
 	}
 	.video-stream {
-		width: 640px;
+		width: 340px;
 		margin: 0 auto;
 		padding: 20px 10px 20px 0;
 	}
 	
 	.chat {
-		width: 610px;
+		width: 210px;
 		padding: 20px 0 20px 10px;
 	}
 
 }
+*/
 
-@media screen and (max-width: 650px) /* Mobile */ {
+/* Mobile */
+
+/*
+@media screen and (max-width: 650px)  {
 	.container {
 		width: 600px;	
 		margin: 0 auto;		
@@ -270,5 +360,54 @@ html[xmlns] .clearfix {
 		padding: 20px 0 20px 10px;
 	}
 
+}
+*/
+
+/* iPad Landscape */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	.container {
+		width: 900px;	
+		margin: 0 auto;		
+		padding: 10px;
+		min-height: 1000px;
+	}
 	
+	.video-stream {
+		width: 580px;
+		padding: 20px 10px 20px 0;
+	}
+	
+	.chat {
+		width: 300px;
+		padding: 20px 0 20px 10px;
+	}
+
+	iframe#video-iframe {
+		width: 580px;
+	}
+
+}
+
+/* iPad Portrait */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+	.container {
+		width: 900px;	
+		margin: 0 auto;		
+		padding: 10px;
+		min-height: 1000px;
+	}
+	
+	.video-stream {
+		width: 580px;
+		padding: 20px 10px 20px 0;
+	}
+	
+	.chat {
+		width: 300px;
+		padding: 20px 0 20px 10px;
+	}
+	
+	iframe#video-iframe {
+		width: 580px;
+	}
 }

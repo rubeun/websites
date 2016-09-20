@@ -24,8 +24,8 @@
 				<h1>Bawdy Streaming</h1>
 				<nav id="bawdy-nav">
 					<ul>
-						<li><a href="/" class="active">Home</a></li>
-						<li><a href="/live">Live Show</a></li>
+						<li><a href="/">Home</a></li>
+						<li><a href="/live" class="active">Live Show</a></li>
 						<li><a href="/videos">VOD/Past Shows</a></li>
 						<li><a href="/about">About</a></li>
 						<li><a href="http://www.bawdystorytelling.com">Bawdy Website</a></li>
@@ -33,15 +33,24 @@
 				</nav>			
 			</header>
 			
-			<div class="home-promo">
-				<div class="home-promo-copy">
-					<h3>Watch Bawdy Storytelling from the comfort of your home.</h3>
-					<p>Bawdy Storytelling features real people sharing their bona fide sexual exploits in 10 minutes or less, Think of us as a One Night Stand with the Moth & Savage Love. Storytellers are an eclectic mix of authors, pornstars, comedians, sex educators and actors, along with a handful of real people just like you who have submitted their stories online and were chosen for their panache and sense of misadventure. Each evening of true dirty stories features tales of carnal wins and epic fails with no scripts, no nets and no holds barred. You may even go home with a few new tricks for your boudoir arsenal!</p> 
-					<p>Watch the Live show or Previously Recorded Broadcasts On Demand at your leisure.</p>
+			<div class="video-stream clear">
+				<!-- DaCast Video Stream Player -->
+				<script id="52952_c_240490" width="720" height="400" src="//player.dacast.com/js/player.js"  class="dacast-video"></script>
+			</div>			
+			<div class="chat">
+				<h3>Bawdy Storytelling Chat</h3>
+				<div id="chat-name">
+					<span class="blink">Chat name: </span>
+					<input type="text" id="chat-name-input" cols="10" placeholder="Type Name & Hit Return" autofocus></input>
 				</div>
+				<div id="chat-box" name="chatBox"></div>
+					<form onsubmit="chat.sendMsg(); return false;">
+						<label id="msg-title" for="msg" style="float:left">Message:</label>
+						<input type="text" id="msg-input" name="msg" cols="15" rows="3" placeholder="Type Your Message Here & Hit Return" />
+						<!-- <input type="submit" /> -->
+					</form>
 			</div>
-			
-									
+						
 			<footer id="bawdy-footer" class="clear">
 				<div>Bawdy Streaming for Bawdy Storytelling by <a href="http://web.rubeun.com/" target="_blank">Rubeun Tan Web Services</a></div>
 			</footer>
@@ -51,6 +60,6 @@
 		<!-- JS Scripts -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-		<script src="/js/bawdy.js"></script>
+		<script src="/js/chat.js"></script>
 	</body>
 </html>

@@ -1,3 +1,14 @@
+/**
+ * chat.js v1.0.0
+ * http://www.bawdystreaming.com
+ *
+ * JS file handling the real-time Anonymous Chat (no login required) using HTML5 SSE (Server Sent Event) 
+ * Chatlog using a rudimentary TXT file since there is no need to security.
+ * 
+ * Copyright 2016, Rubeun Tan
+ * http://www.rubeun.com
+ */
+
 var ChatEngine=function(){
      var name=" ";
      var inputName = "";
@@ -44,7 +55,7 @@ var ChatEngine=function(){
           catch(err){
                alert(err);
           }
-          xhr.open('GET','chat-controller.php?msg='+msg+'&name='+name,false);
+          xhr.open('GET','../chat-controller.php?msg='+msg+'&name='+name,true);
           xhr.onreadystatechange = function(){
                if(xhr.readyState == 4) {
                     if(xhr.status == 200) {
@@ -57,7 +68,7 @@ var ChatEngine=function(){
      };
      //HTML5 SSE(Server Sent Event) initilization
      this.initSevr=function(){
-          sevr = new EventSource('chat-controller.php');
+          sevr = new EventSource('../chat-controller.php');
           sevr.onmessage = function(e){ 
 	          if(oldata!=e.data){
 	          		console.log("Old Data: " + oldata + "vs New Data: " + e.data)
