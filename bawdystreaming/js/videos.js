@@ -55,14 +55,18 @@ $( document ).ready(function() {
 		
 			case "bawdy-6-2016":				
 				videoTitle = "Bawdy Storytelling June 2016";
-				dacastSrc = "//iframe.dacast.com/b/52952/f/303760";
+				dacastSrc = "//iframe.dacast.com/b/52952/f/327792";
 			break;	 
 
 			case "bonafide-5-2016":				
 				videoTitle = "Bona Fide Storytelling May 2016";
-				dacastSrc = "//iframe.dacast.com/b/52952/f/297500";
+				dacastSrc = "//iframe.dacast.com/b/52952/f/327769";
 			break;	 
 
+			case "bawdy-summer-package-2016":				
+				videoTitle = "Bawdy Storytelling Summer Package 2016";
+				dacastSrc = "//iframe.dacast.com/b/52952/p/260148";
+			break;	 		
 				
 		}
 		
