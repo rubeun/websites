@@ -10,12 +10,13 @@
  */
 
 
-$( document ).ready(function() {
+$( document ).ready(function() {	
+
 
 	// Initialise & Set Default Video Source and Title for page
-	var dacastSrc = "//iframe.dacast.com/b/52952/f/327345";
-	var videoTitle = "Bawdy Storytelling September 2016";
-	document.getElementById('video-title').innerHTML = videoTitle;
+	var dacastSrc = "//iframe.dacast.com/b/52952/f/559508";
+	var videoTitle = "Bawdy Storytelling May 2018";
+	document.getElementById('video-title').innerHTML = "Now Playing: " + videoTitle;
 
 	$('#vod-box').accordion({
 		animate: 500,
@@ -33,7 +34,76 @@ $( document ).ready(function() {
 		// Video page ID associates with DaCast video iframe source   
 		switch (this.id) {
 			//console.log("ID clicked: " + this.id);
-			case "bawdy-9-2016":				
+
+			case "bawdy-05-2018":				
+				videoTitle = "Bawdy Storytelling May 2018";
+				dacastSrc = "//iframe.dacast.com/b/52952/f/559508";
+			break;	 
+			case "bawdy-04-2018":				
+				videoTitle = "Bawdy Storytelling April 2018";
+				dacastSrc = "//iframe.dacast.com/b/52952/f/547910";
+			break;	 
+			case "bawdy-03-2018":				
+				videoTitle = "Bawdy Storytelling March 2018";
+				dacastSrc = "//iframe.dacast.com/b/52952/f/534811";
+			break;	 
+			case "bawdy-01-2018":				
+				videoTitle = "Bawdy Storytelling January 2018";
+				dacastSrc = "//iframe.dacast.com/b/52952/f/510063";
+			break;	 
+			case "bawdy-12-2017":				
+				videoTitle = "Bawdy Storytelling December 2017";
+				dacastSrc = "//iframe.dacast.com/b/52952/f/496088";
+			break;	 
+			case "bawdy-11-2017":				
+				videoTitle = "Bawdy Storytelling November 2017";
+				dacastSrc = "//iframe.dacast.com/b/52952/f/477152";
+			break;	 
+			case "bawdy-10-2017":				
+				videoTitle = "Bawdy Storytelling October 2017";
+				dacastSrc = "//iframe.dacast.com/b/52952/f/463595";
+			break;	 
+			case "bawdy-09-2017":				
+				videoTitle = "Bawdy Storytelling September 2017";
+				dacastSrc = "//iframe.dacast.com/b/52952/f/449294";
+			break;	 
+			case "bawdy-07-2017":				
+				videoTitle = "Bawdy Storytelling July 2017";
+				dacastSrc = "//iframe.dacast.com/b/52952/f/430243";
+			break;	 
+			case "bawdy-05-2017":				
+				videoTitle = "Bawdy Storytelling May 2017";
+				dacastSrc = "//iframe.dacast.com/b/52952/f/410368";
+			break;	 
+			case "bawdy1-02-2017":				
+				videoTitle = "Bawdy Storytelling February 2017 7pm";
+				dacastSrc = "//iframe.dacast.com/b/52952/f/378991";
+			break;	 
+			case "bawdy2-02-2017":				
+				videoTitle = "Bawdy Storytelling February 2017 10pm";
+				dacastSrc = "//iframe.dacast.com/b/52952/f/378892";
+			break;	 						
+			case "bawdy-01-2017":				
+				videoTitle = "Bawdy Storytelling January 2017";
+				dacastSrc = "//iframe.dacast.com/b/52952/f/364902";
+			break;	 
+			case "bawdy-12-2016":				
+				videoTitle = "Bawdy Storytelling December 2016";
+				dacastSrc = "//iframe.dacast.com/b/52952/f/354265";
+			break;	 
+			case "bawdy-11-2016":				
+				videoTitle = "Bawdy Storytelling November 2016";
+				dacastSrc = "//iframe.dacast.com/b/52952/f/339340";
+			break;	 
+			case "bawdy-10-2016":				
+				videoTitle = "Bawdy Storytelling October 2016";
+				dacastSrc = "//iframe.dacast.com/b/52952/f/333799";
+			break;	 
+			case "bawdy2-9-2016":				
+				videoTitle = "Bawdy Storytelling September FSF 2016";
+				dacastSrc = "//iframe.dacast.com/b/52952/f/328452";
+			break;	 
+			case "bawdy1-9-2016":				
 				videoTitle = "Bawdy Storytelling September 2016";
 				dacastSrc = "//iframe.dacast.com/b/52952/f/327345";
 			break;	 
@@ -72,7 +142,7 @@ $( document ).ready(function() {
 		
 		// Change iFrame source to new Video's source & update the video's title		
 		document.getElementById('video-iframe').src = dacastSrc;
-		document.getElementById('video-title').innerHTML = videoTitle;
+		document.getElementById('video-title').innerHTML = "Now Playing: " + videoTitle;
 		
 	});  
     

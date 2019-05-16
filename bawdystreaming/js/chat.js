@@ -108,7 +108,7 @@ $(document).ready(function(){
     if (event.which == 13) {
       event.preventDefault();
       chat.sendMessage();
-      $("#msg-title").removeClass("blink");		
+      $("#msg-input").focus();	
       console.log("Return Pressed in Chat Input");		  
     }
   });
