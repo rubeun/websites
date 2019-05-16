@@ -4,7 +4,7 @@
  *
  * CSS file for entire Bawdy Streaming site 
  * 
- * Copyright 2016, Rubeun Tan
+ * Copyright 2017, Rubeun Tan
  * http://www.rubeun.com
  */
 
@@ -33,7 +33,7 @@ body {
 	font-size: 1.1em;
 	font-weight: 500;
 	font-family: 'Josefin Sans', Arial, sans-serif;
-	width: 1000px;
+	width: 1200px;
 	min-height: 800px;
   	border-radius: 10px;		
   	-webkit-border-radius: 10px;
@@ -97,6 +97,11 @@ nav ul li a.active:hover {
 	color: #fff;
 }
 
+/* fix blue bar at bottom of menu bar */
+#cssmenu > ul > li > a::before {
+	background: none;
+}
+
 /* clearfix */
 .clearfix:after {
   	content: ".";
@@ -138,7 +143,7 @@ html[xmlns] .clearfix {
 .home-promo-copy {
 	width: 700px;
 	margin: 0 10px 10px 0;
-	padding: 230px 50px 10px 50px;
+	padding: 205px 50px 10px 50px;
 }
 
 .home-promo-copy h3,
@@ -160,14 +165,16 @@ html[xmlns] .clearfix {
 
 /* Right Column - Chat */
 #chat-name {
-	padding: 10px 0;
+	padding: 5px 0 15px 0;
 }
 
 #chat-name-input {
-	width: 150px;
-	height: 15px;
+	width: 160px;
+	height: 20px;
 	margin: 5px 0;
 	border-radius: 7px;
+	padding: 0 5px;
+	font-size: 14px;
 }
 
 .chat-name-set {
@@ -180,13 +187,13 @@ html[xmlns] .clearfix {
 }
 
 .chat {
-	width: 270px;
+	width: 540px;
 	padding: 20px 0 20px 10px;
 	float: left;
 }
 
 .chat #chat-box {
-	height: 380px;
+	height: 325px;
 	padding: 10px 0;
 	border: 1px solid #ddd;
 	border-radius: 7px;
@@ -240,15 +247,17 @@ html[xmlns] .clearfix {
 	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 	outline: none;
 	padding: 4px 6px;
-	font-size: 10px;
+	font-size: 14px;
 	line-height: 20px;
 	color: #555555;
 	border-radius: 3px;
-	width: 255px;
+	width: 430px;
+	margin-top: 8px;
 }
 
 #msg-title {
 	padding: 10px 0 5px 0;
+	margin: 0 5px 0 0;
 }
 
 
@@ -256,10 +265,11 @@ html[xmlns] .clearfix {
 
 iframe#video-iframe {
 	width: 640px;
+	height: 400px;
 }
 
 .vod {
-	width: 270px;
+	width: 540px;
 	padding: 20px 0 20px 10px;
 	float: left;
 }
@@ -304,15 +314,15 @@ iframe#video-iframe {
 /* ### ABOUT PAGE ### */
 
 #about-content {
-	width: 660px;
-	margin: 0 20px 0 0;
+	width: 860px;
+	margin: 20px 20px 0 0;
 	float: left;
 	
 }
 
 #yelpwidget {
 	width: 240px;
-	margin: 0 0 0 55px;
+	margin: 70px 0 0 55px;
 	padding: 10px;
 	float: left;
 	background: #fff;
@@ -320,6 +330,30 @@ iframe#video-iframe {
 	border-radius: 5px;
 }
 
+/* ### TUTORIAL ### */
+.tutorial-body {
+	width: 700px;
+}
+
+.tutorial-copy {
+
+}
+
+#tutorial-new {
+	padding: 10px;
+	background: #333;
+	opacity: 0.7;
+}
+
+#tutorial-returning {
+	padding: 10px;
+	background: #333;
+	opacity: 0.7;
+}
+
+.tutorial-ready {
+	padding: 10px 0 50px 0;
+}
 
 /* ### MISC ### */
 
@@ -333,14 +367,19 @@ iframe#video-iframe {
 }
 @keyframes blink {
     from {
+        color: #fff;
         opacity: 1;
     }
     to {
-        opacity: 0.5;
+        color: #f00;
+        opacity: 0.3;
     }
 }
 
 
+
+
+/* ########################## MOBILE ###########################*/
 
 /* Tablet */
 
@@ -367,30 +406,144 @@ iframe#video-iframe {
 }
 */
 
-/* Mobile */
+/* Mobile - iPhone 5 */
 
-/*
-@media screen and (max-width: 650px)  {
+@media only screen and (max-device-width: 320px) {
 	.container {
-		width: 600px;	
+		width: 100%;	
 		margin: 0 auto;		
-		background-color: #fff;
 		padding: 10px;
 		min-height: 1000px;
 	}
+
+	.home-promo {
+		width: 100%;
+	}
 	
+	.home-promo-copy {
+		width: 100%;
+		padding: 80px 0 0 0;
+	}
+
+	iframe#video-iframe {
+		width: 100%;
+		margin: 0 auto;
+	}
+	
+	.vod {
+		width: 90%;
+		margin: 0 auto;
+		padding: 10px;
+		float: left;
+	}
+	
+	.vod #vod-box {
+		min-height: 85%;
+		border-radius: 7px;
+		background: #000;
+	}
+
 	.video-stream {
-		width: 640px;
-		padding: 20px 10px 20px 0;
+		width: 100%;
+		margin: 0 auto;
 	}
 	
 	.chat {
-		width: 610px;
-		padding: 20px 0 20px 10px;
+		width: 90%;
+		padding: 20px auto;
+	}
+	
+	#msg-input {
+		width: 97%;
+	}
+	
+	.video-disclaimer {
+		display: none;
 	}
 
+	#about-content {
+		width: 96%;
+	}
+	
+	#yelpwidget {
+		margin: 0 auto;
+	}
+
+
 }
-*/
+
+
+/* Mobile - iPhone 6+ */
+
+@media only screen and (max-device-width: 420px) {
+	.container {
+		width: 95%;	
+		margin: 0 auto;		
+		padding: 10px;
+	}
+
+	nav ul {
+	}
+
+	.home-promo {
+		width: 100%;
+		height: 100%;
+	}
+	
+	.home-promo-copy {
+		width: 100%;
+		padding: 280px 0 0 0;
+	}
+
+	iframe#video-iframe {
+		width: 100%;
+		margin: 0 auto;
+	}
+	
+	.vod {
+		width: 95%;
+		margin: 0 auto;
+		padding: 10px;
+		float: left;
+	}
+	
+	.vod #vod-box {
+		min-height: 85%;
+		border-radius: 7px;
+		background: #000;
+	}
+
+	.video-stream {
+		width: 100%;
+		margin: 0 auto;
+	}
+	
+	.chat {
+		width: 95%;
+		padding: 20px auto;
+	}
+	
+	#msg-input {
+		width: 97%;
+	}
+	
+	.video-disclaimer {
+		display: none;
+	}
+
+	#about-content {
+		width: 96%;
+	}
+	
+	#yelpwidget {
+		margin: 0 auto;
+	}
+	
+	.dacast-payment .buynow {
+		width: 100%;
+	}
+	
+}
 
 /* iPad Landscape */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
@@ -398,7 +551,11 @@ iframe#video-iframe {
 		width: 900px;	
 		margin: 0 auto;		
 		padding: 10px;
-		min-height: 1000px;
+		min-height: 700px;
+	}
+	
+	.home-promo-copy{
+		font-size: 0.9em;
 	}
 	
 	.video-stream {
@@ -430,9 +587,13 @@ iframe#video-iframe {
 		width: 900px;	
 		margin: 0 auto;		
 		padding: 10px;
-		min-height: 1000px;
+		min-height: 700px;
 	}
-	
+
+	.home-promo-copy{
+		font-size: 0.9em;
+	}
+		
 	.video-stream {
 		width: 580px;
 		padding: 20px 10px 20px 0;

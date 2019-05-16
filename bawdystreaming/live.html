@@ -2,14 +2,16 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>Bawdy Streaming - Live Streaming and Video On Demand for Bawdy Storytelling</title>
-		<meta name="description" content="TODO">
-		<meta name="keywords" content="TODO">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Live Show - Bawdy Streaming - Live Streaming and Video On Demand for Bawdy Storytelling</title>
+		<meta name="description" content="Bawdy Streaming bringing Live Video Streaming for Bawdy Storytelling the Nation's Original Sex+Storytelling series">
+		<meta name="keywords" content="Bawdy Storytelling, Bawdy Streaming, Live Streaming, Video On Demand, Web Stream, Webcast">
 		<meta name="robots" content="index,follow">
-		<meta name="author" content="TODO">
+		<meta name="author" content="Rubeun Tan">
 		
 		<!-- CSS Styles -->
 		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+		<link rel="stylesheet" href="/css/3dnav-styles.css?v=1.0">		
 		<link rel="stylesheet" href="/css/styles.css?v=1.0">
 
 		<!--[if lt IE 9]>
@@ -22,30 +24,35 @@
 		<div class="container">
 			<header id="bawdy-header">
 				<h1>Bawdy Streaming</h1>
-				<nav id="bawdy-nav">
+				<nav id='cssmenu'>
 					<ul>
 						<li><a href="/">Home</a></li>
 						<li><a href="/live" class="active">Live Show</a></li>
 						<li><a href="/videos">VOD/Past Shows</a></li>
 						<li><a href="/about">About</a></li>
-						<li><a href="http://www.bawdystorytelling.com">Bawdy Website</a></li>
+						<li><a href="http://www.bawdystorytelling.com" target="_blank">Bawdy Storytelling Website</a></li>
 					</ul>
 				</nav>			
 			</header>
 			
 			<div class="video-stream clear">
+				<h3 id="stream-title">Bawdy Live Web Stream</h3>
+				<p>Next Stream: <span id="live-title"></span></p>
 				<!-- DaCast Video Stream Player -->
-				<script id="52952_c_240490" width="720" height="400" src="//player.dacast.com/js/player.js"  class="dacast-video"></script>
+				<iframe id="video-iframe" src="//iframe.dacast.com/b/52952/c/240490" width="720" height="400" frameborder="0" scrolling="no" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+				<p>If you have any issues during the show, please text Rubeun at (415) 937-7236.</p>
+				<p>For a quick tutorial on how to use watch the streams click <a href="/stream-tutorial/">here</a></p> 				
+				<p>To watch show after broadcast has completed, please go to the <a href="/videos/">VOD</a> page</p>
 			</div>			
 			<div class="chat">
 				<h3>Bawdy Storytelling Chat</h3>
 				<div id="chat-name">
-					<span class="blink">Chat name: </span>
+					<span class="blink">Chat name &rArr; </span>
 					<input type="text" id="chat-name-input" cols="10" placeholder="Type Name & Hit Return" autofocus></input>
 				</div>
 				<div id="chat-box" name="chatBox"></div>
 					<form onsubmit="chat.sendMsg(); return false;">
-						<label id="msg-title" for="msg" style="float:left">Message:</label>
+						<label id="msg-title" for="msg" style="float:left">Message &rArr; </label>
 						<input type="text" id="msg-input" name="msg" cols="15" rows="3" placeholder="Type Your Message Here & Hit Return" />
 						<!-- <input type="submit" /> -->
 					</form>
@@ -60,6 +67,20 @@
 		<!-- JS Scripts -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+		<!-- Navigation Bar -->
+		<script src="/js/3dnav-script.js"></script>		
+		
 		<script src="/js/chat.js"></script>
+		<script src="/js/live.js"></script>
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		
+		  ga('create', 'UA-85223110-1', 'auto');
+		  ga('send', 'pageview');
+		
+		</script>
 	</body>
 </html>

@@ -2,15 +2,38 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>Bawdy Streaming - Live Streaming and Video On Demand for Bawdy Storytelling</title>
-		<meta name="description" content="TODO">
-		<meta name="keywords" content="TODO">
+		<meta name="description" content="Bawdy Streaming bringing Live Video Streaming for Bawdy Storytelling the Nation's Original Sex+Storytelling series">
+		<meta name="keywords" content="Bawdy Storytelling, Bawdy Streaming, Live Streaming, Video On Demand, Web Stream, Webcast">
 		<meta name="robots" content="index,follow">
-		<meta name="author" content="TODO">
+		<meta name="author" content="Rubeun Tan">
+
+		<!-- Favicons -->		
+		<link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="/favicon/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+		<link rel="manifest" href="/favicon/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+		
 		
 		<!-- CSS Styles -->
 		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+		<link rel="stylesheet" href="/css/3dnav-styles.css?v=1.0">		
 		<link rel="stylesheet" href="/css/styles.css?v=1.0">
+
 
 		<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -22,13 +45,13 @@
 		<div class="container">
 			<header id="bawdy-header">
 				<h1>Bawdy Streaming</h1>
-				<nav id="bawdy-nav">
+				<nav id='cssmenu'>
 					<ul>
 						<li><a href="/" class="active">Home</a></li>
 						<li><a href="/live">Live Show</a></li>
 						<li><a href="/videos">VOD/Past Shows</a></li>
 						<li><a href="/about">About</a></li>
-						<li><a href="http://www.bawdystorytelling.com">Bawdy Website</a></li>
+						<li><a href="http://www.bawdystorytelling.com" target="_blank">Bawdy Storytelling Website</a></li>
 					</ul>
 				</nav>			
 			</header>
@@ -37,8 +60,13 @@
 				<div class="home-promo-copy">
 					<h3>Watch Bawdy Storytelling from the comfort of your home.</h3>
 					<p>Bawdy Storytelling features real people sharing their bona fide sexual exploits in 10 minutes or less, Think of us as a One Night Stand with the Moth & Savage Love. Storytellers are an eclectic mix of authors, pornstars, comedians, sex educators and actors, along with a handful of real people just like you who have submitted their stories online and were chosen for their panache and sense of misadventure. Each evening of true dirty stories features tales of carnal wins and epic fails with no scripts, no nets and no holds barred. You may even go home with a few new tricks for your boudoir arsenal!</p> 
-					<p>Watch the Live show or Previously Recorded Broadcasts On Demand at your leisure.</p>
+					<p>Watch the <a href="/live/">Live show</a> or Previously Recorded Broadcasts <a href="/videos/">On Demand</a> at your leisure.</p>
+					<p>Next Live Show will be on <span class="blink" id="live-title"></span></p>
 				</div>
+			</div>
+			<div class="home-promo-cto">
+				<div class="promo-left"></div>
+				<div class="promo-right"></div>
 			</div>
 			
 									
@@ -51,6 +79,19 @@
 		<!-- JS Scripts -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-		<script src="/js/bawdy.js"></script>
+		<!-- Navigation Bar -->
+		<script src="/js/3dnav-script.js"></script>		
+		<script src="/js/live.js"></script>
+		
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		
+		  ga('create', 'UA-85223110-1', 'auto');
+		  ga('send', 'pageview');
+		
+		</script>
 	</body>
 </html>
