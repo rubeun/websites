@@ -1,0 +1,80 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <title>Beats Dating</title>
+      <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+      <link rel="stylesheet" href="css/normalize.css" media="screen" charset="utf-8">
+      <link rel="stylesheet" href="css/html5bp.css" media="screen" charset="utf-8">
+      <link rel="stylesheet" href="css/style.css" media="screen" charset="utf-8">
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+    </head>
+
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <header>
+          <section class="container">
+            <a id="logo-dating" href="#"><h2 class="glow">Beats Dating</h2></a>
+            <span id="user-message" class="blink"></span>
+            <audio id="audio-player" controls autoplay>
+              <source src="media/Pan-Pot - Sleepless (Stephan Bodzin Remix).mp3" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+    
+            <nav>
+              <ul>
+                <li><a href="#">User Menu</a>
+                  <ul id="user-nav">
+                    <!-- nav loaded by app.js -->
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+            <div class="clearfix"></div>
+          </section>
+        </header>
+
+        <div id="pop-up" class="popup loader hidden">          
+        </div>  
+        <div class="loader"></div>
+        <section id="main" class="container">
+          <!-- articles loaded by app.js -->
+          <div id="main-page">
+
+          </div>
+
+        </section>
+
+        <video autoplay muted loop id="techno-video">
+            <source src="media/beats-dating-bg1.mp4" type="video/mp4">
+        </video>
+
+        <!-- Firebase -->
+        <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+        <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyD_XYHd8aCq4biZzy5d5hXKhHFUWLAB8F8",
+            authDomain: "rubeun-dating.firebaseapp.com",
+            databaseURL: "https://rubeun-dating.firebaseio.com",
+            projectId: "rubeun-dating",
+            storageBucket: "rubeun-dating.appspot.com",
+            messagingSenderId: "174661841292"
+        };
+        firebase.initializeApp(config);
+        </script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+        <script src="js/templates.js?v=1"></script>
+        <script src="js/app.js?v=2"></script>
+
+    </body>
+</html>

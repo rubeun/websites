@@ -1,0 +1,360 @@
+/* General styles */
+body {
+  font-family: 'Orbitron', sans-serif;
+}
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    z-index: 200;
+  }
+  
+  /*
+  Audio Player Styles
+  audio::-webkit-media-controls-panel
+
+  audio::-webkit-media-controls-mute-button
+
+  audio::-webkit-media-controls-play-button
+
+  audio::-webkit-media-controls-timeline-container
+
+  audio::-webkit-media-controls-current-time-display
+
+  audio::-webkit-media-controls-time-remaining-display
+
+  audio::-webkit-media-controls-timeline
+
+  audio::-webkit-media-controls-volume-slider-container
+
+  audio::-webkit-media-controls-volume-slider
+
+  audio::-webkit-media-controls-seek-back-button
+
+  audio::-webkit-media-controls-seek-forward-button
+
+  audio::-webkit-media-controls-fullscreen-button
+
+  audio::-webkit-media-controls-rewind-button
+
+  audio::-webkit-media-controls-return-to-realtime-button
+
+  audio::-webkit-media-controls-toggle-closed-captions-button
+  */  
+  #audio-player {
+    position: fixed;
+    bottom: 5px;  
+    left: 5px;
+    width: 92px;
+    opacity: 0.6;
+  }
+
+  audio::-webkit-media-controls-panel {
+    background-color: rgb(107, 1, 72);
+  }
+
+  audio::-webkit-media-controls-timeline,
+  audio::-webkit-media-controls-current-time-display,
+  audio::-webkit-media-controls-time-remaining-display {
+    display: none;
+  }
+
+
+  #techno-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    z-index: -100;
+  }
+
+  .loading {
+    background: url("../images/loader-record1.gif");
+    width: 50px;
+    height: 50px;
+  }
+
+
+  #pop-up {
+    opacity: 0.9;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:  #000;
+    z-index: 300;
+  }
+  
+  #pop-up .closePopUp {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 40px;
+    color: rgb(107, 1, 72);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  #pop-up.loader {
+    background-image: url(../images/ajax_loader.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  
+  #pop-up.loader .container {
+    display: none;
+  }
+  
+  #pop-up .container {
+    margin-top: 80px;
+    padding: 20px;
+    opacity: 1;
+    background: rgb(107, 1, 72);
+    border-radius: 10px;
+    opacity: 1;
+    color: #fff;
+  }
+  
+  #pop-up h1 {
+    margin-bottom: 0;
+  }
+  
+  #pop-up .popUpAction {
+    padding: 10px;
+    background-color: rgb(107, 1, 72);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transform: 0.2s all;
+    margin-top: 30px;
+    display: inline-block;
+  }
+  
+  #pop-up .popUpAction:hover {
+    color: rgb(107, 1, 72);
+    background: #fff;
+  }
+  
+  #pop-up #submit-registration,
+  #pop-up #submit-login {
+    color: rgb(107, 1, 72);
+    font-size: 0.8em;
+  }
+
+  #pop-up input {
+    color: #000;
+  }
+
+  #pop-up #register-gender {
+    color: #000;
+    font-size: 0.8em;    
+  }
+
+  /* Header styles */
+  header {
+    background-color: rgb(107, 1, 72);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+  }
+  
+  header h2 {
+    color: #FFF;
+    padding: 10px 2%;
+    margin: 0;
+    width: 22%;
+    float: left;
+    padding-left: 0;
+  }
+
+  header #user-message {
+    width: 55%;
+    float: left;
+    text-align: right;
+    cursor: default;
+    color: #FFF;
+    line-height: 30px;
+    margin-top: 0;
+    position: relative;
+    vertical-align: middle;
+    padding: 16px 2% 10px 2%;
+  }
+
+  /* Header navigation bar */
+  header nav {
+    padding: 10px 2%;
+    width: 13%;
+    float: right;
+    text-align: right;
+    line-height: 30px;
+    margin-top: 0;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+  
+  /* Search bar */
+  header #search {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+  }
+  
+  header #search a {
+    display: block;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  header #search a:hover {
+    background: rgb(107, 1, 72);
+  }
+  
+  header #search img {
+    width: 100%;
+    display: block;
+  }
+  
+  header #search input {
+    position: absolute;
+    right: 20px;
+    /*top: 10px;*/
+    padding: 8px 0;
+    width: 0;
+    transition: 0.2s all;
+    visibility: hidden;
+  }
+  
+  header #search.active input {
+    width: 160px;
+    padding: 8px 10px;
+    visibility: visible;
+  }
+  
+  header #search.active a {
+    background: rgb(107, 1, 72);
+  }
+  
+  header nav a {
+    display:block;
+      padding:0 10px;
+      color:#FFF;
+      font-size:16px;
+      line-height: 40px;
+      text-decoration:none;
+    transition: 0.2s all;
+  }
+  
+  header nav a:hover {
+    background-color: #fff;
+    color: rgb(107, 1, 72);
+  }
+  
+  nav ul {
+      padding:0;
+      margin:0;
+      list-style: none;
+      position: relative;
+      }
+  
+  nav ul li {
+      display:inline-block;
+      background-color: rgb(107, 1, 72);
+    position: relative;
+  }
+  
+  nav ul ul {
+      display: none;
+      position: absolute;
+      top: 40px;
+      right: -30px;
+  }
+  
+  /* Display Dropdowns on Hover */
+  nav ul li:hover > ul {
+      display:inherit;
+  }
+  
+  /* First Tier Dropdown */
+  nav ul ul li {
+      width:170px;
+      float:none;
+      display:list-item;
+      position: relative;
+  }
+  
+  /* Main Section */
+  #main {
+    margin-top: 65px;
+  }
+
+  #main input {
+    color: #000;
+  }
+
+  #main .home-page {
+    padding: 20px;
+    background-color: rgb(107, 1, 72);
+    color: #fff;
+    opacity: 0.9;
+    font-family: 'Orbitron', sans-serif;
+  }
+
+  #main .home-page span {
+    color: rgb(168, 252, 175);
+  }
+
+  #main .home-page #edit-gender,
+  #main .home-page #edit-search-gender,
+  #main .home-page #edit-radius {
+    color: #000;
+    font-size: 0.8em;    
+  }
+
+  #submit-edit,
+  #submit-save {
+    color: rgb(107, 1, 72);
+    font-size: 0.8em;
+  }
+
+  /* Force usernames to be lowercase */
+  #pop-up #register-username,
+  #pop-up #login-username {
+    text-transform: lowercase;
+  }
+
+  /* Fancy Anim */
+  .glow {
+    animation-duration: 1s;
+    animation-name: glow;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+  }
+  @keyframes glow {
+    from {
+      text-shadow: -2px 2px rgb(253, 0, 169);
+    } to {
+      text-shadow: 2px 2px rgb(0, 0, 0);
+    }
+  }
+
+  .blink {
+    animation-duration: 1s;
+    animation-name: blink;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+  }
+  @keyframes blink {
+    from {
+      color: rgb(253, 0, 169);
+    } to {
+      color: rgb(255, 255, 255);
+    }
+  }
